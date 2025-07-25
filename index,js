@@ -1,0 +1,84 @@
+import { Button } from "bootstrap";
+$(document).ready(function() {
+    const API_URL = 'https://api.example.com/best-authors'; // Initialize the best authors list
+    fetchBestAuthors();
+
+const onFetchBestAuthorsClick = () => {
+    const data = onFetchBestAuthorsClick
+}
+function fetchBestAuthors() {
+
+    return []
+}
+const bestAuthorsContainer = document.getElementById('bestAuthors'). addEventListener('add', async function(event) {
+    event.preventDefault();
+    await createBestAuthors();
+});
+
+
+//  const bestAuthors = await getBestAuthors();
+//     if (bestAuthors && bestAuthors.length > 0) {
+//         bestAuthorsContainer.innerHTML = '';
+//         authors.forEach(author => {
+//             const li = document.createElement('li');
+//             li.textContent = author.name;
+//             bestAuthorsContainer.appendChild(li);
+//         });
+//     } else {
+//         bestAuthorsContainer.innerHTML = '<li>No authors found</li>';
+//     }
+// }
+
+// Function fetches alll authors from the API
+async function getBestAuthors() {
+    try {
+        const response = await fetch('https://api.example.com/best-authors');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return bestAuthors;
+    } catch (error) {
+        console.error('Error fetching best authors:', error);
+        return [];
+    }
+}
+
+// Adds a new author to the list
+ async function addBestAuthors(text) {
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text: text,
+          completed: false,
+        }),
+      });
+      const bestAuthors = await response.json();
+      return bestAuthors;
+    } catch (error) {
+      console.error("Error adding bestAuthors:", error);
+      return null;
+    }
+  }
+// Deletes an author from the API list
+
+async function deleteBestAuthors(id) {
+    try {
+        const response = await fetch(`${API_URL}/${id}`, {
+            method: "DELETE",
+        });
+        return true;
+    } catch (error) {
+        console.error("Error deleting bestAuthors:", error);
+        return false;
+    }
+}
+
+//<button type="button" class="btn btn-danger" id=$(bestAuthorsContainer.id)>Delete</button>
+
+
+}) 
