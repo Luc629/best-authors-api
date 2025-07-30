@@ -1,26 +1,39 @@
 {
-    "bestAuthors": [
-        {
-         "id": 1,
-         "text": "Ayn Rand",
-         "completed": false
-        },
-
-        {
-        "id": 2,
-         "text": "Stephen King",
-         "completed": false
-        },
-        {
-        "id": 3,
-         "text": "Julie Garwood",
-         "completed": false  
-        },
-        {
-        "id": 4,
-         "text": "Allen Eskens",
-         "completed": false
-        }
-       
-    ]
+  "bestAuthors": [
+    {
+      "id": "1",
+      "text": "Ayn Rand",
+      "completed": true
+    },
+    {
+      "id": "2",
+      "text": "Stephen King",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "text": "Julie Garwood",
+      "completed": false
+    },
+    {
+      "id": "4",
+      "text": "Allen Eskens",
+      "completed": false
+    },
+    {
+      "id": "18aa",
+      "text": "Posit Desa",
+      "completed": false
+    },
+    {
+      "id": "90a9",
+      "text": "Hunter Ptate",
+      "completed": false
+    },
+    {
+      "id": "b1fd",
+      "text": "Hunter Ptate",
+      "completed": false
+    }
+  ]
 }
